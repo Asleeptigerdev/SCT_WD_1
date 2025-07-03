@@ -1,0 +1,171 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Color Palette */
+:root {
+  --primary: #1f1f2e;
+  --secondary: #ff3366;
+  --bg-light: #29293d;
+  --text-light: #ffffff;
+  --text-muted: #bbbbbb;
+}
+
+/* Body */
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 40px;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--text-light);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: var(--secondary);
+}
+
+/* Navbar on Scroll */
+#navbar.scrolled {
+  background-color: var(--primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff3366, #1f1f2e);
+  text-align: center;
+  padding-top: 60px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #f4f4f4;
+  margin-top: 10px;
+}
+
+/* Content Section */
+.content {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--secondary);
+}
+
+.content p {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--primary);
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border-radius: 8px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #111827; /* Darker vibrant shade */
+    color: #f1f5f9; /* Adjust text for readability on dark bg */
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1d4ed8, #111827); /* Blue to dark gradient */
+  }
+
+  .content h2 {
+    color: #38bdf8; /* Light blue heading */
+  }
+
+  .content p {
+    color: #cbd5e1; /* Soft light text */
+  }
+
+  footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+  }
+}

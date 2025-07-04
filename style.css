@@ -1,4 +1,4 @@
-/* General Reset */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* Color Palette */
 :root {
   --primary: #1f1f2e;
   --secondary: #ff3366;
@@ -31,6 +30,17 @@ body {
   padding: 20px 40px;
   transition: all 0.4s ease;
   z-index: 1000;
+}
+
+#navbar:hover {
+  background-color: var(--primary);
+  transition: background 0.4s ease;
+}
+
+
+#navbar.scrolled {
+  background-color: var(--primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
 .nav-container {
@@ -62,12 +72,6 @@ body {
   color: var(--secondary);
 }
 
-/* Navbar on Scroll */
-#navbar.scrolled {
-  background-color: var(--primary);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
 /* Hero */
 .hero {
   height: 100vh;
@@ -90,7 +94,7 @@ body {
   margin-top: 10px;
 }
 
-/* Content Section */
+/* Content Sections */
 .content {
   padding: 80px 20px;
   max-width: 800px;
@@ -108,6 +112,54 @@ body {
   font-size: 1rem;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
+  background: var(--bg-light);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--secondary);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #e13c61;
 }
 
 /* Footer */
@@ -145,73 +197,3 @@ footer {
     font-size: 1rem;
   }
 }
-
-@media (max-width: 768px) {
-  body {
-    background-color: #111827; /* Darker vibrant shade */
-    color: #f1f5f9; /* Adjust text for readability on dark bg */
-  }
-
-  .hero {
-    background: linear-gradient(135deg, #1d4ed8, #111827); /* Blue to dark gradient */
-  }
-
-  .content h2 {
-    color: #38bdf8; /* Light blue heading */
-  }
-
-  .content p {
-    color: #cbd5e1; /* Soft light text */
-  }
-
-  footer {
-    background-color: #0f172a;
-    color: #94a3b8;
-  }
-
-body:hover nav {
-   background-color: var(--primary);
-   transition: background 0.4s ease;
-  }
-
-  .contact-section {
-  padding: 60px 20px;
-  background: #f9f9f9;
-  text-align: center;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  width: 100%;
-}
-
-.contact-form button {
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
-  background: #333;
-  color: #fff;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.3s;
-}
-
-.contact-form button:hover {
-  background: #555;
-}
-
-
-}
-

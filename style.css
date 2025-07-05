@@ -196,4 +196,29 @@ footer {
   .hero-text p {
     font-size: 1rem;
   }
+
+  @media (max-width: 768px) {
+  body {
+    background-color: #111827; /* Darker vibrant shade */
+    color: #f1f5f9; /* Adjust text for readability on dark bg */
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #1d4ed8, #111827); /* Blue to dark gradient */
+  }
+
+  .content h2 {
+    color: #38bdf8; /* Light blue heading */
+  }
+
+  .content p {
+    color: #cbd5e1; /* Soft light text */
+  }
+
+  footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+  }
+}
+
 }
